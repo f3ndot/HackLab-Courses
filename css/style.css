@@ -72,7 +72,7 @@ a:hover {
 
 .workshop_title {
   color:#fff;
-  padding: 7px 0;
+  padding: 7px 0 0 0;
   cursor: pointer;
 }
 .workshop_title h1 {
@@ -81,18 +81,26 @@ a:hover {
 }
 .workshop_title.grey h5 {
   color:#ccc;
-  padding: 0 7px;
+  padding: 0 7px 7px 7px;
 }
 .workshop_title.orange h5 {
-  color:#444;
-  padding: 0 7px;
+  color:#555;
+  padding: 0 7px 7px 7px;
 }
 
 .date {
   float:right;
-  background:#f2f2f2;
+  background:#fff;
   color:#333;
   padding:5px;
   font-size:15px;
   font-weight: bold;
+}
+
+.workshop_content {
+  background: #fff;
+  display: none;
+}
+.workshop_content p {
+  padding: 14px 7px;
 }

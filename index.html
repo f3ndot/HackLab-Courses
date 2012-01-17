@@ -7,6 +7,29 @@
 <link rel="stylesheet" href="css/text.css" />
 <link rel="stylesheet" href="css/960.css" />
 <link rel="stylesheet" href="css/style.css" />
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('.workshop_title')
+      .append('<div class="blue remove_me" style="color:#fff;font-weight:500;display:none;"><p style="padding:4px">Click me for workshop details and resources</p></div>')
+      .hover(function () {
+        $(this).not('.expanded').children('.remove_me').filter(':not(:animated)').slideDown();
+      }, function() {
+        $(this).children('.remove_me').slideUp();
+      })
+      .click(function() {
+        if($(this).hasClass('expanded')) {
+          $(this).removeClass('expanded');
+          $(this).next('.workshop_content').slideUp();
+        } else {
+          $(this).addClass('expanded');
+          $(this).children('.remove_me').slideUp();
+          $(this).next('.workshop_content').slideDown();
+        }
+      });
+  });
+</script>
 </head>
 <body>
 <div class="container_12">
@@ -17,46 +40,76 @@
   </div>
   <div class="clear"></div>
 
-  <h1 class="grid_12 bo_20" style="font-weight:400">Currently Active Workshops</h1>
-  <div class="grid_12 bo_20 workshop_title orange">
+  <h1 class="grid_12" style="font-weight:400">Currently Active Workshops</h1>
+  <div class="grid_12 to_20 workshop_title orange">
     <div class="date">January 16th, 23rd, &amp; 30th</div>
     <h1>Basic Electronics Workshop Series</h1>
     <h5>By Andrew Kilpatrick</h5>
   </div>
+  <div class="grid_12 workshop_content">
+    <p>
+      wow
+    </p>
+  </div>
 
-  <div class="grid_12 workshop_title orange">
+  <div class="grid_12 to_20 workshop_title orange">
     <div class="date">January 16th, 23rd, &amp; 30th</div>
     <h1>Basic Electronics Workshop Series</h1>
     <h5>By Andrew Kilpatrick</h5>
   </div>
+  <div class="grid_12 workshop_content">
+    <p>
+      wow
+    </p>
+  </div>
 
-  <div class="grid_12 bo_20">
+  <div class="grid_12">
     <hr class="to_40 bo_20" />
     <h1 style="font-weight:400">Archived Workshops</h1>
   </div>
 
-  <div class="grid_12 bo_20 workshop_title grey">
+  <div class="grid_12 to_20 workshop_title grey">
     <div class="date">January 16th, 23rd, &amp; 30th</div>
     <h1>Basic Electronics Workshop Series</h1>
     <h5>By Andrew Kilpatrick</h5>
   </div>
+  <div class="grid_12 workshop_content">
+    <p>
+      wow
+    </p>
+  </div>
 
-  <div class="grid_12 bo_20 workshop_title grey">
+  <div class="grid_12 to_20 workshop_title grey">
     <div class="date">January 16th, 23rd, &amp; 30th</div>
     <h1>Basic Electronics Workshop Series</h1>
     <h5>By Andrew Kilpatrick</h5>
   </div>
+  <div class="grid_12 workshop_content">
+    <p>
+      wow
+    </p>
+  </div>
 
-  <div class="grid_12 bo_20 workshop_title grey">
+  <div class="grid_12 to_20 workshop_title grey">
     <div class="date">January 16th, 23rd, &amp; 30th</div>
     <h1>Basic Electronics Workshop Series</h1>
     <h5>By Andrew Kilpatrick</h5>
   </div>
+  <div class="grid_12 workshop_content">
+    <p>
+      wow
+    </p>
+  </div>
 
-  <div class="grid_12 bo_40 workshop_title grey">
+  <div class="grid_12 to_20 workshop_title grey">
     <div class="date">January 16th, 23rd, &amp; 30th</div>
     <h1>Basic Electronics Workshop Series</h1>
     <h5>By Andrew Kilpatrick</h5>
+  </div>
+  <div class="grid_12 workshop_content">
+    <p>
+      wow
+    </p>
   </div>
 
   <div class="clear"></div>
